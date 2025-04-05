@@ -31,7 +31,8 @@ int main() {
         tabuleiro[coordenadaNavioVertical[0] + i][coordenadaNavioVertical[1]] = navioVertical[i];
     }
 
-    
+    // Imprimir o tabuleiro
+    imprimirTabuleiro(tabuleiro);
 
     return 0;
 }
