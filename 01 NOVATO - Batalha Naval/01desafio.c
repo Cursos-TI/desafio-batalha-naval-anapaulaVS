@@ -12,8 +12,12 @@ void imprimirTabuleiro(int tabuleiro[10][10]) {
 
 int main() {
 
-     // Inicializar o Tabuleiro com '0s' (ZEROS) representando Água
-     int tabuleiro[10][10] = {0};
+    // Inicializar o Tabuleiro com '0s' (ZEROS) representando Água
+    int tabuleiro[10][10] = {0};
+     
+    // Declarar e inicializar os Vetores para representar os Navios
+    int navioHorizontal[3] = {3, 3, 3};
+    int navioVertical[3] = {3, 3, 3};
 
      
 
