@@ -12,6 +12,8 @@ void imprimirTabuleiro(int tabuleiro[10][10]) {
 
 int main() {
 
+    printf("TABULEIRO BATALHA NAVAL - NOVATO! \n");
+
     // Inicializar o Tabuleiro com '0s' (ZEROS) representando Água
     int tabuleiro[10][10] = {0};
      
@@ -23,10 +25,13 @@ int main() {
     int coordenadaNavioHorizontal[] = {2, 5}; // linha e coluna
     int coordenadaNavioVertical[] = {7, 3}; // linha e coluna
 
-     
+    // Posicionar os navios no tabuleiro
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[coordenadaNavioHorizontal[0]][coordenadaNavioHorizontal[1] + i] = navioHorizontal[i];
+        tabuleiro[coordenadaNavioVertical[0] + i][coordenadaNavioVertical[1]] = navioVertical[i];
+    }
 
-    printf("TABULEIRO BATALHA NAVAL - NOVATO! \n");
-
+    
 
     return 0;
 }
