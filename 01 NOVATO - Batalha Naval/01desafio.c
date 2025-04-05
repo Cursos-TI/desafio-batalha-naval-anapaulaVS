@@ -19,6 +19,10 @@ int main() {
     int navioHorizontal[3] = {3, 3, 3};
     int navioVertical[3] = {3, 3, 3};
 
+    // Definir as coordenadas iniciais dos Navios
+    int coordenadaNavioHorizontal[] = {2, 5}; // linha e coluna
+    int coordenadaNavioVertical[] = {7, 3}; // linha e coluna
+
      
 
     printf("TABULEIRO BATALHA NAVAL - NOVATO! \n");
