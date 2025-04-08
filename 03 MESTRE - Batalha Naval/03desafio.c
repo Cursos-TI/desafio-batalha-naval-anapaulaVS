@@ -22,6 +22,16 @@ int main() {
 
      int tabuleiro[10][10] = {0};
 
+     // Posicionar Navios Horizontais e Verticais
+
+    tabuleiro[2][5] = 3;
+    tabuleiro[2][6] = 3;
+    tabuleiro[2][7] = 3;
+
+    tabuleiro[6][7] = 3;
+    tabuleiro[7][7] = 3;
+    tabuleiro[8][7] = 3;
+
 return 0;
 
 }
