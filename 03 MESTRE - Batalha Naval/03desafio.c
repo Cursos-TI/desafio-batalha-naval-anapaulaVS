@@ -42,6 +42,10 @@ int main() {
     tabuleiro[8][1] = 3;
     tabuleiro[9][0] = 3;
 
+    // Imprimir o Tabuleiro
+
+    imprimirTabuleiro(tabuleiro);
+
 return 0;
 
 }
