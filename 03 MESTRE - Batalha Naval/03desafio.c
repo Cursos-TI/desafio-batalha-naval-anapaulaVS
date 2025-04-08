@@ -18,6 +18,10 @@ int main() {
     printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
     printf(" \n");
 
+     // Inicializar o Tabuleiro com ZEROS (água)
+
+     int tabuleiro[10][10] = {0};
+
 return 0;
 
 }
