@@ -2,7 +2,7 @@
 
 int main() {
 
-    printf("TABULEIRO BATALHA NAVAL - AVENTUREIRO! \n");
+    printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
     printf(" \n");
 
 return 0;
