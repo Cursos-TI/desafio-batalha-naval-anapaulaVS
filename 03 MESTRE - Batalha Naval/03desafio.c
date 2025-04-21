@@ -10,7 +10,7 @@ void imprimirTabuleiro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
 
     // Impressão da linha de cabeçalho com Letras de A a J
 
-    printf(" A B C D E F G H I J \n");
+    printf(" A B C D E F G H I J\n");
 
     // Loop para imprimir cada linha do Tabuleiro
 
