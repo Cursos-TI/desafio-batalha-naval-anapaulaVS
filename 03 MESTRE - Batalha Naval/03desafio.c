@@ -4,6 +4,8 @@
 
 #define TAMANHO_TABULEIRO 10
 
+// Função para imprimir o tabuleiro
+
 void imprimirTabuleiro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
     printf(" A B C D E F G H I J\n");
     for (int i = 0; i < TAMANHO_TABULEIRO; i++) {
