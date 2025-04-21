@@ -13,12 +13,24 @@ void imprimirTabuleiro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
     printf(" A B C D E F G H I J\n");
 
     // Loop para imprimir cada linha do tabuleiro
-    
+
     for (int i = 0; i < TAMANHO_TABULEIRO; i++) {
+
+        // Impressão do número da linha
+
         printf("%d ", i + 1);
+
+        // Loop para imprimir cada elemento da linha
+
         for (int j = 0; j < TAMANHO_TABULEIRO; j++) {
+
+            // Impressão do elemento do tabuleiro
+
             printf("%d ", tabuleiro[i][j]);
         }
+
+        // Quebra de linha após imprimir cada linha
+        
         printf("\n");
     }
 }
