@@ -87,6 +87,32 @@ void criarHabilidadeCruz(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO], in
     }
 }
 
+// Função para criar a habilidade de octaedro no tabuleiro
+
+void criarHabilidadeOctaedro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO], int x, int y) {
+
+    // Marcação da posição central como afetada pela habilidade
+
+    if (x >= 0 && x < TAMANHO_TABULEIRO && y >= 0 && y < TAMANHO_TABULEIRO && tabuleiro[x][y] != 3) {
+        tabuleiro[x][y] = 5;
+    }
+
+    // Marcação das posições adjacentes como afetadas pela habilidade
+
+    if (x - 1 >= 0 && x - 1 < TAMANHO_TABULEIRO && y >= 0 && y < TAMANHO_TABULEIRO && tabuleiro[x - 1][y] != 3) {
+        tabuleiro[x - 1][y] = 5;
+    }
+    if (x + 1 >= 0 && x + 1 < TAMANHO_TABULEIRO && y >= 0 && y < TAMANHO_TABULEIRO && tabuleiro[x + 1][y] != 3) {
+        tabuleiro[x + 1][y] = 5;
+    }
+    if (x >= 0 && x < TAMANHO_TABULEIRO && y - 1 >= 0 && y - 1 < TAMANHO_TABULEIRO && tabuleiro[x][y - 1] != 3) {
+        tabuleiro[x][y - 1] = 5;
+    }
+    if (x >= 0 && x < TAMANHO_TABULEIRO && y + 1 >= 0 && y + 1 < TAMANHO_TABULEIRO && tabuleiro[x][y + 1] != 3) {
+        tabuleiro[x][y + 1] = 5;
+    }
+}
+
 int main() {
 
     printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
