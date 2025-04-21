@@ -115,8 +115,10 @@ void criarHabilidadeOctaedro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]
 
 int main() {
 
-    printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
-    printf(" \n");
+   // Impressão do título do jogo
+
+   printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
+   printf(" \n");
 
 return 0;
 
