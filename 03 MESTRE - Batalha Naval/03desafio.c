@@ -115,37 +115,41 @@ void criarHabilidadeOctaedro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]
 
 int main() {
 
-   // Impressão do título do jogo
+    // Impressão do título do jogo
 
-   printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
-   printf(" \n");
+    printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
+    printf(" \n");
 
-   // Inicialização do tabuleiro com zeros
+    // Inicialização do tabuleiro com zeros
 
-   int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO] = {0};
+    int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO] = {0};
 
-   // Posicionamento dos navios no tabuleiro
+    // Posicionamento dos navios no tabuleiro
 
-   tabuleiro[2][5] = 3;
-   tabuleiro[2][6] = 3;
-   tabuleiro[2][7] = 3;
-   tabuleiro[6][7] = 3;
-   tabuleiro[7][7] = 3;
-   tabuleiro[8][7] = 3;
+    tabuleiro[2][5] = 3;
+    tabuleiro[2][6] = 3;
+    tabuleiro[2][7] = 3;
+    tabuleiro[6][7] = 3;
+    tabuleiro[7][7] = 3;
+    tabuleiro[8][7] = 3;
 
-   tabuleiro[3][3] = 3;
-   tabuleiro[4][4] = 3;
-   tabuleiro[5][5] = 3;
-   tabuleiro[7][2] = 3;
-   tabuleiro[8][1] = 3;
-   tabuleiro[9][0] = 3;
+    tabuleiro[3][3] = 3;
+    tabuleiro[4][4] = 3;
+    tabuleiro[5][5] = 3;
+    tabuleiro[7][2] = 3;
+    tabuleiro[8][1] = 3;
+    tabuleiro[9][0] = 3;
 
-   // Criação das habilidades no tabuleiro
+    // Criação das habilidades no tabuleiro
 
-   criarHabilidadeCone(tabuleiro, 0, 4);
-   criarHabilidadeCruz(tabuleiro, 5, 5);
-   criarHabilidadeOctaedro(tabuleiro, 8, 3);
+    criarHabilidadeCone(tabuleiro, 0, 4);
+    criarHabilidadeCruz(tabuleiro, 5, 5);
+    criarHabilidadeOctaedro(tabuleiro, 8, 3);
 
-return 0;
+    // Impressão do tabuleiro com as habilidades
+
+    imprimirTabuleiro(tabuleiro);
+
+    return 0;
 
 }
