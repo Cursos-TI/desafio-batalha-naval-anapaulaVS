@@ -1,57 +1,57 @@
 #include <stdio.h>
 
-// Definição do tamanho do tabuleiro (10x10)
+// Definição do tamanho do Tabuleiro (10x10)
 
 #define TAMANHO_TABULEIRO 10
 
-// Função para imprimir o tabuleiro
+// Função para imprimir o Tabuleiro
 
 void imprimirTabuleiro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
 
-    // Impressão da linha de cabeçalho com letras de A a J
+    // Impressão da linha de cabeçalho com Letras de A a J
 
     printf(" A B C D E F G H I J\n");
 
-    // Loop para imprimir cada linha do tabuleiro
+    // Loop para imprimir cada linha do Tabuleiro
 
     for (int i = 0; i < TAMANHO_TABULEIRO; i++) {
 
-        // Impressão do número da linha
+        // Impressão do Número da linha
 
         printf("%d ", i + 1);
 
-        // Loop para imprimir cada elemento da linha
+        // Loop para imprimir cada Elemento da linha
 
         for (int j = 0; j < TAMANHO_TABULEIRO; j++) {
 
-            // Impressão do elemento do tabuleiro
+            // Impressão do Elemento do Tabuleiro
 
             printf("%d ", tabuleiro[i][j]);
         }
 
-        // Quebra de linha após imprimir cada linha
+        // Quebra de linha após imprimir cada Linha
 
         printf("\n");
     }
 }
 
-// Função para criar a habilidade de cone no tabuleiro
+// Função para criar a habilidade de Cone no Tabuleiro
 
 void criarHabilidadeCone(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO], int x, int y) {
 
-    // Loop para criar a forma de cone
+    // Loop para criar a forma de Cone
 
     for (int i = 0; i < 3; i++) {
 
-        // Loop para criar a base do cone
+        // Loop para criar a base do Cone
 
         for (int j = -i; j <= i; j++) {
 
-            // Verificação se a posição está dentro do tabuleiro e não é um navio
+            // Verificação da Posição 
 
             if (x + i >= 0 && x + i < TAMANHO_TABULEIRO && y + j >= 0 && y + j < TAMANHO_TABULEIRO && tabuleiro[x + i][y + j] != 3) {
                 
-                // Marcação da posição como afetada pela habilidade
+                // Marcação da Posição 
                 
                 tabuleiro[x + i][y + j] = 5;
             }
@@ -59,45 +59,45 @@ void criarHabilidadeCone(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO], in
     }
 }
 
-// Função para criar a habilidade de cruz no tabuleiro
+// Função para criar a habilidade de Cruz no Tabuleiro
 
 void criarHabilidadeCruz(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO], int x, int y) {
 
-    // Loop para criar a forma de cruz
+    // Loop para criar a forma de Cruz
 
     for (int i = -2; i <= 2; i++) {
 
-        // Verificação se a posição está dentro do tabuleiro e não é um navio
+        // Verificação da Posição
 
         if (x >= 0 && x < TAMANHO_TABULEIRO && y + i >= 0 && y + i < TAMANHO_TABULEIRO && tabuleiro[x][y + i] != 3) {
 
-            // Marcação da posição como afetada pela habilidade
+            // Marcação da Posição
 
             tabuleiro[x][y + i] = 5;
         }
 
-        // Verificação se a posição está dentro do tabuleiro e não é um navio
+        // Verificação da Posição 
 
         if (x + i >= 0 && x + i < TAMANHO_TABULEIRO && y >= 0 && y < TAMANHO_TABULEIRO && tabuleiro[x + i][y] != 3) {
 
-            // Marcação da posição como afetada pela habilidade
+            // Marcação da Posição 
 
             tabuleiro[x + i][y] = 5;
         }
     }
 }
 
-// Função para criar a habilidade de octaedro no tabuleiro
+// Função para criar a habilidade de Octaedro no Tabuleiro
 
 void criarHabilidadeOctaedro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO], int x, int y) {
 
-    // Marcação da posição central como afetada pela habilidade
+    // Marcação da posição Central afetada pela Habilidade
 
     if (x >= 0 && x < TAMANHO_TABULEIRO && y >= 0 && y < TAMANHO_TABULEIRO && tabuleiro[x][y] != 3) {
         tabuleiro[x][y] = 5;
     }
 
-    // Marcação das posições adjacentes como afetadas pela habilidade
+    // Marcação das posições Adjacentes afetadas pela Habilidade
 
     if (x - 1 >= 0 && x - 1 < TAMANHO_TABULEIRO && y >= 0 && y < TAMANHO_TABULEIRO && tabuleiro[x - 1][y] != 3) {
         tabuleiro[x - 1][y] = 5;
@@ -115,16 +115,16 @@ void criarHabilidadeOctaedro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]
 
 int main() {
 
-    // Impressão do título do jogo
+    // Impressão do Título do Jogo
 
     printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
     printf(" \n");
 
-    // Inicialização do tabuleiro com zeros
+    // Inicialização do Tabuleiro com Zeros
 
     int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO] = {0};
 
-    // Posicionamento dos navios no tabuleiro
+    // Posicionamento dos Navios no Tabuleiro
 
     tabuleiro[2][5] = 3;
     tabuleiro[2][6] = 3;
@@ -140,13 +140,13 @@ int main() {
     tabuleiro[8][1] = 3;
     tabuleiro[9][0] = 3;
 
-    // Criação das habilidades no tabuleiro
+    // Criação das Habilidades no Tabuleiro
 
     criarHabilidadeCone(tabuleiro, 0, 4);
     criarHabilidadeCruz(tabuleiro, 5, 5);
     criarHabilidadeOctaedro(tabuleiro, 8, 3);
 
-    // Impressão do tabuleiro com as habilidades
+    // Impressão do Tabuleiro com as Habilidades
 
     imprimirTabuleiro(tabuleiro);
 
