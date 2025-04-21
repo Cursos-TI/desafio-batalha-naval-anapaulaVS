@@ -34,7 +34,7 @@ void imprimirTabuleiro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
         printf("\n");
     }
 }
-
+}
 int main() {
 
     printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
