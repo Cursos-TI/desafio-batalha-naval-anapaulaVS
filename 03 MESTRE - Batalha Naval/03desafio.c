@@ -59,6 +59,34 @@ void criarHabilidadeCone(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO], in
     }
 }
 
+// Função para criar a habilidade de cruz no tabuleiro
+
+void criarHabilidadeCruz(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO], int x, int y) {
+
+    // Loop para criar a forma de cruz
+
+    for (int i = -2; i <= 2; i++) {
+
+        // Verificação se a posição está dentro do tabuleiro e não é um navio
+
+        if (x >= 0 && x < TAMANHO_TABULEIRO && y + i >= 0 && y + i < TAMANHO_TABULEIRO && tabuleiro[x][y + i] != 3) {
+
+            // Marcação da posição como afetada pela habilidade
+
+            tabuleiro[x][y + i] = 5;
+        }
+
+        // Verificação se a posição está dentro do tabuleiro e não é um navio
+
+        if (x + i >= 0 && x + i < TAMANHO_TABULEIRO && y >= 0 && y < TAMANHO_TABULEIRO && tabuleiro[x + i][y] != 3) {
+
+            // Marcação da posição como afetada pela habilidade
+
+            tabuleiro[x + i][y] = 5;
+        }
+    }
+}
+
 int main() {
 
     printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
