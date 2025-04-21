@@ -34,7 +34,31 @@ void imprimirTabuleiro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
         printf("\n");
     }
 }
+
+// Função para criar a habilidade de cone no tabuleiro
+
+void criarHabilidadeCone(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO], int x, int y) {
+
+    // Loop para criar a forma de cone
+
+    for (int i = 0; i < 3; i++) {
+
+        // Loop para criar a base do cone
+
+        for (int j = -i; j <= i; j++) {
+
+            // Verificação se a posição está dentro do tabuleiro e não é um navio
+
+            if (x + i >= 0 && x + i < TAMANHO_TABULEIRO && y + j >= 0 && y + j < TAMANHO_TABULEIRO && tabuleiro[x + i][y + j] != 3) {
+                
+                // Marcação da posição como afetada pela habilidade
+                
+                tabuleiro[x + i][y + j] = 5;
+            }
+        }
+    }
 }
+
 int main() {
 
     printf("TABULEIRO BATALHA NAVAL - MESTRE! \n");
