@@ -30,7 +30,7 @@ void imprimirTabuleiro(int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO]) {
         }
 
         // Quebra de linha após imprimir cada linha
-        
+
         printf("\n");
     }
 }
